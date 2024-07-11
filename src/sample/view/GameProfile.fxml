@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchorpane" prefHeight="769.0" prefWidth="1192.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameProfileController">
+   <children>
+      <ScrollPane layoutY="52.0" prefHeight="717.0" prefWidth="1192.0" style="-fx-background-color: #333333;">
+         <content>
+            <AnchorPane prefHeight="842.0" prefWidth="1176.0" style="-fx-background-color: #333333;">
+               <children>
+                  <AnchorPane fx:id="AnchorImage" layoutX="26.0" layoutY="68.0" prefHeight="190.0" prefWidth="395.0" style="-fx-background-color: #ffffff;" />
+                  <Label fx:id="TitleTxt" layoutX="26.0" prefHeight="54.0" prefWidth="429.0" text="Detroit:Become Human" textFill="#e8e8e8">
+                     <font>
+                        <Font name="Arial" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DescriptionTxt" alignment="TOP_LEFT" layoutX="101.0" layoutY="266.0" prefHeight="227.0" prefWidth="341.0" text="EPIC FANTASY REBORN The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose." textFill="#c9c9c9" wrapText="true" />
+                  <Label layoutX="20.0" layoutY="266.0" text="Περιγραφή:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="459.0" layoutY="21.0" prefHeight="661.0" prefWidth="703.0" style="-fx-background-color: #c7c8c9;">
+                     <children>
+                        <Button layoutX="515.0" layoutY="600.0" mnemonicParsing="false" onAction="#RentNow" prefHeight="45.0" prefWidth="163.0" stylesheets="@../../Viper.css" text="Ενοικίαση τωρα!">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="401.0" layoutY="604.0" prefHeight="37.0" prefWidth="49.0" text="Τιμή:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="PriceTxt" layoutX="451.0" layoutY="604.0" prefHeight="37.0" prefWidth="65.0" text="10€">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <BorderPane fx:id="BorderVideoPlayer" layoutX="22.0" layoutY="25.0" prefHeight="269.0" prefWidth="670.0">
+                           <bottom>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="backImage" cache="true" cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#back" pickOnBounds="true" styleClass="image">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="playpauseImage" cache="true" cacheHint="QUALITY" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#play" pickOnBounds="true" styleClass="image">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets left="35.0" right="35.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="nextImage" cache="true" cacheHint="QUALITY" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#next" pickOnBounds="true" styleClass="image">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="muteImage" cache="true" cacheHint="QUALITY" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="200.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Slider fx:id="volumeSlider" prefHeight="13.0" prefWidth="140.0" />
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                        <Separator layoutY="464.0" prefHeight="19.0" prefWidth="698.0" />
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="69.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="DateTxt" layoutX="112.0" layoutY="495.0" prefHeight="37.0" prefWidth="122.0" text="12/12/1212" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="495.0" prefHeight="37.0" prefWidth="90.0" text="Βαθμολογία:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="RatingTxt" layoutX="337.0" layoutY="495.0" prefHeight="37.0" prefWidth="56.0" text="10/10" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="495.0" prefHeight="37.0" prefWidth="90.0" text="Κυκλοφορία:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="558.0" prefHeight="37.0" prefWidth="68.0" text="Εκδότης:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CreatorTxt" layoutX="82.0" layoutY="558.0" prefHeight="37.0" prefWidth="220.0" text="War robots inc" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="280.0" layoutY="558.0" prefHeight="37.0" prefWidth="82.0" text="Κατηγορία:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CategoryTxt" layoutX="365.0" layoutY="558.0" prefHeight="37.0" prefWidth="90.0" text="RPG" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="595.0" prefHeight="37.0" prefWidth="225.0" text="Απαιτήσεις συστήματος:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="2.0" layoutY="628.0" prefHeight="4.0" prefWidth="455.0" />
+                  <Label layoutX="20.0" layoutY="682.0" prefHeight="37.0" prefWidth="108.0" text="Επεξεργαστής:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="638.0" prefHeight="37.0" prefWidth="163.0" text="Λειτουργικό Σύστημα:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="OsTxt" layoutX="178.0" layoutY="638.0" prefHeight="37.0" prefWidth="257.0" text="Μακινγκτοσ" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="725.0" prefHeight="37.0" prefWidth="108.0" text="Μνήμη Ram: " textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="764.0" prefHeight="37.0" prefWidth="132.0" text="Κάρτα γραφικών:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="809.0" prefHeight="37.0" prefWidth="157.0" text="Απαιτούμενος Χώρος:" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CpuTxt" layoutX="177.0" layoutY="679.0" prefHeight="37.0" prefWidth="279.0" text="ιντελ κορε" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="RamTxt" layoutX="178.0" layoutY="722.0" prefHeight="37.0" prefWidth="271.0" text="5 γκιγκα" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="GpuTxt" layoutX="178.0" layoutY="763.0" prefHeight="37.0" prefWidth="429.0" text="Μακινγκτοσ" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SpaceTxt" layoutX="178.0" layoutY="808.0" prefHeight="37.0" prefWidth="264.0" text="Μακινγκτοσ" textFill="#d3d2d2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </content>
+      </ScrollPane>
+      <MenuBar layoutX="1077.0" layoutY="9.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #333333;">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="Profile_Btn" mnemonicParsing="false" onAction="#Profile" text="Προφίλ" />
+                  <MenuItem fx:id="Edit_Btn" mnemonicParsing="false" onAction="#EditProfile" text="Επεξεργασία προφίλ" />
+                  <MenuItem fx:id="Logout_Btn" mnemonicParsing="false" onAction="#LogOut" text="Αποσύνδεση" />
+            </items>
+               <graphic>
+                  <ImageView fx:id="profileImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="BackToStore_Btn" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#BackToStore" prefHeight="37.0" prefWidth="163.0" styleClass="back_button" stylesheets="@../../Viper.css" text="Πίσω στο κατάστημα" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

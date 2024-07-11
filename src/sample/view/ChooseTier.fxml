@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="538.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChooseTierController">
+   <children>
+      <ImageView fx:id="BackgroundImage1" fitHeight="671.0" fitWidth="1053.0" layoutY="-75.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Icons/gaming_background_withoutX.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Pane layoutX="131.0" layoutY="50.0" prefHeight="470.0" prefWidth="791.0" style="-fx-background-color: #7A7A7A; -fx-background-radius: 25; -fx-opacity: 0.5;" />
+      <Pane layoutX="272.0" layoutY="68.0" prefHeight="109.0" prefWidth="511.0" style="-fx-background-color: #1F1F1F; -fx-background-radius: 13;" />
+      <ImageView fx:id="BackgroundImage" fitHeight="386.0" fitWidth="676.0" layoutX="184.0" layoutY="123.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../Downloads/game_store_plans.png" />
+         </image>
+      </ImageView>
+      <Button id="planBtn" fx:id="ChooseBronzeBtn" layoutX="244.0" layoutY="447.0" mnemonicParsing="false" onAction="#ChooseBronze" style="-fx-background-color: #555555;" stylesheets="@../../Viper.css" text="Επιλογή" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button id="planBtn" fx:id="ChooseGoldBtn" layoutX="711.0" layoutY="447.0" mnemonicParsing="false" onAction="#ChooseGold" style="-fx-background-color: #555555;" stylesheets="@../../Viper.css" text="Επιλογή" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="planBtn" fx:id="ChooseSilverBtn" layoutX="468.0" layoutY="456.0" mnemonicParsing="false" onAction="#ChooseSilver" style="-fx-background-color: #555555;" stylesheets="@../../Viper.css" text="Επιλογή" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="CancelBtn" layoutX="14.0" layoutY="542.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: white; -fx-background-radius: 10;" stylesheets="@../../Viper.css" text="Άκυρο">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="284.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Διαλέξτε πλάνο συνδρομής">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

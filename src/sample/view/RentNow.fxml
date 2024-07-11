@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="576.0" prefWidth="749.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RentNowController">
+    <children>
+        <Button fx:id="Cancel_Btn" layoutX="14.0" layoutY="511.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="45.0" prefWidth="130.0" text="Ακύρωση" />
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="215.0" text="Επιλεγμένο παιχνίδι:" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="TitleTxt" layoutX="229.0" layoutY="14.0" prefHeight="45.0" prefWidth="337.0" text="Apex legends" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="70.0" prefHeight="45.0" prefWidth="215.0" text="Μέρες δανεισμού:" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="126.0" prefHeight="45.0" prefWidth="215.0" text="Τελική τιμή:" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="FinalPriceTxt" layoutX="229.0" layoutY="126.0" prefHeight="45.0" prefWidth="235.0" text="40€" textFill="WHITE">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <TextField fx:id="DaysTxt" layoutX="229.0" layoutY="77.0" onKeyReleased="#CalculateFPrice" prefHeight="31.0" prefWidth="56.0" />
+        <ImageView fx:id="SecureImage" fitHeight="40.0" fitWidth="40.0" layoutX="447.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="496.0" layoutY="253.0" prefHeight="31.0" prefWidth="144.0" text="Ασφαλής online αγορά" />
+        <ImageView fx:id="credidCardImage" fitHeight="40.0" fitWidth="40.0" layoutX="568.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="Rent_Btn" layoutX="580.0" layoutY="498.0" mnemonicParsing="false" onAction="#Rent" prefHeight="58.0" prefWidth="158.0" text="Ενοίκιαση">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <BorderPane fx:id="CreditCardPane" layoutX="32.0" layoutY="196.0" prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <AnchorPane fx:id="Cred" prefHeight="279.0" prefWidth="690.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="cNumTxt" layoutX="56.0" layoutY="56.0" onKeyReleased="#CheckCNum" prefHeight="48.0" prefWidth="287.0" promptText="Αριθμός Κάρτας" />
+                        <TextField fx:id="CNameTxt" layoutX="56.0" layoutY="162.0" onKeyReleased="#CheckName" prefHeight="48.0" prefWidth="287.0" promptText="Ονοματεπώνυμο" />
+                        <TextField fx:id="cvvTxt" layoutX="375.0" layoutY="162.0" onKeyReleased="#CheckCVV" prefHeight="48.0" prefWidth="221.0" promptText="CVV" />
+                        <ImageView fx:id="SecureImage" fitHeight="30.0" fitWidth="30.0" layoutX="437.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="486.0" layoutY="243.0" prefHeight="31.0" prefWidth="144.0" text="Ασφαλής online αγορά" />
+                        <ImageView fx:id="credidCardImage" fitHeight="20.0" fitWidth="20.0" layoutX="563.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="CnumWarning" layoutX="62.0" layoutY="104.0" text="Ο αριθμός κάρτας δεν μπορεί να είναι κενός!" textFill="RED" />
+                  <Label fx:id="CnameWarning" layoutX="56.0" layoutY="207.0" text="Το Ονοματεπώνυμο δεν μπορεί να ειναι κενό!" textFill="RED" />
+                  <Label fx:id="CVVwarning" layoutX="375.0" layoutY="207.0" text="Το CVV δεν μπορεί να ειναι κενό!" textFill="RED" />
+                  <Label fx:id="DateWarning" layoutX="383.0" layoutY="105.0" text="Η Ημερομηνία δεν μπορεί να είναι κενη!" textFill="RED" />
+                  <TextField fx:id="expDate" layoutX="378.0" layoutY="59.0" onKeyReleased="#CheckExpDate" prefHeight="45.0" prefWidth="215.0" promptText="Ημ.Λήξης Πχ.05/25" />
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

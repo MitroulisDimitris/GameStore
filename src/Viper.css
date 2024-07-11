@@ -1,0 +1,28 @@
+.back_button:hover
+{
+  -fx-background-color: #c7c8c9;
+
+}
+.back_button:pressed
+{
+  -fx-background-color: brown;
+}
+.back_button{
+ -fx-background-color: #efefef;
+ -fx-background-radius : 50;
+ -fx-background-radius: 50px;
+
+ }
+.playpause_button{
+}
+
+.button {
+   color: white;
+  /* text-shadow: 2px 2px 4px #000000;*/
+ }
+
+#planBtn:hover
+{
+  -fx-background-color: #c7c8c9;
+
+}

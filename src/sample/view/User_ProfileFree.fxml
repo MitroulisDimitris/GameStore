@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPane" prefHeight="700.0" prefWidth="1104.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User_ProfileFreeController">
+    <children>
+        <Pane layoutX="402.0" layoutY="100.0" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #333; -fx-background-radius: 10;">
+            <children>
+                <ImageView fx:id="ProfilePic" fitHeight="121.0" fitWidth="118.0" layoutX="98.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../Icons/DefaultProfileImage.png" />
+                </ImageView>
+                <Label fx:id="UserNameTxt" alignment="CENTER" layoutX="21.0" layoutY="85.0" prefHeight="39.0" prefWidth="263.0" text="Αριστοτέλης Παλλασίδης " textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="86.0" layoutY="447.0" mnemonicParsing="false" onAction="#UserSettings" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 6; -fx-background-color: #EFEFEF;" text="Ρυθμίσεις" textFill="#333333">
+                    <font>
+                        <Font name="Segoe UI" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Icons/settings.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <VBox layoutX="40.0" layoutY="208.0" prefHeight="204.0" prefWidth="114.0">
+                    <children>
+                        <Label text="Όνομα" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Επίθετο" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="91.0" text="Ημερομηνία &#10;Εγγραφής" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox layoutX="100.0" layoutY="208.0" prefHeight="180.0" prefWidth="172.0" style="-fx-alignment: BASELINE_RIGHT;">
+                    <children>
+                        <Label fx:id="FnameTxt" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="81.0" text="Καβάλα" textAlignment="RIGHT" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="LnameTxt" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="86.0" text="Κέντρο" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="DateTxt" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="107.0" text="Ελ. Βενιζέλο" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <Label fx:id="TierLbl" alignment="CENTER" layoutX="86.0" layoutY="131.0" prefHeight="37.0" prefWidth="140.0" style="-fx-background-color: #854704; -fx-background-radius: 6;" text="Απλό Μέλος" textFill="#efefef">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="35.46" radius="12.1325" width="15.07">
+                    <color>
+                        <Color blue="0.20000000298023224" green="0.20000000298023224" red="0.20000000298023224" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </Pane>
+        <Button layoutX="897.0" layoutY="35.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #d9534f; -fx-background-radius: 6;" text="Πίσω" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label layoutX="103.0" layoutY="37.0" text="Προφίλ" textFill="#333333">
+            <font>
+                <Font name="Segoe UI Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="43.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Icons/profile.png" />
+            </image>
+        </ImageView>
+        <Circle fill="#0275d8" layoutX="103.0" layoutY="218.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="148.0" layoutY="385.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="260.0" layoutY="238.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="304.0" layoutY="569.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="850.0" layoutY="208.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="797.0" layoutY="405.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="982.0" layoutY="425.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="879.0" layoutY="559.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="869.0" layoutY="351.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="777.0" layoutY="110.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="777.0" layoutY="248.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="1064.0" layoutY="228.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="1044.0" layoutY="619.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="899.0" layoutY="435.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="933.0" layoutY="361.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="606.0" layoutY="649.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="212.0" layoutY="425.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="103.0" layoutY="519.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="366.0" layoutY="143.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="168.0" layoutY="163.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="43.0" layoutY="321.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="188.0" layoutY="589.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="280.0" layoutY="415.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="178.0" layoutY="301.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="260.0" layoutY="110.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="376.0" layoutY="278.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="396.0" layoutY="659.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="43.0" layoutY="659.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="53.0" layoutY="475.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="270.0" layoutY="649.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="542.0" layoutY="639.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="702.0" layoutY="649.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="777.0" layoutY="529.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="787.0" layoutY="331.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="973.0" layoutY="163.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="972.0" layoutY="278.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="953.0" layoutY="508.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#f0ad4e" layoutX="963.0" layoutY="649.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="1044.0" layoutY="143.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="280.0" layoutY="341.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="123.0" layoutY="301.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="53.0" layoutY="143.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="346.0" layoutY="485.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="168.0" layoutY="475.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="840.0" layoutY="629.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="1034.0" layoutY="508.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="943.0" layoutY="228.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="777.0" layoutY="153.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="889.0" layoutY="143.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#0275d8" layoutX="1012.0" layoutY="321.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="123.0" layoutY="609.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="304.0" layoutY="288.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="232.0" layoutY="518.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="850.0" layoutY="488.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="1054.0" layoutY="385.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="879.0" layoutY="268.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="532.0" layoutY="679.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#333333" layoutX="424.0" layoutY="629.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="53.0" layoutY="385.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="616.0" layoutY="669.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#d9534f" layoutX="757.0" layoutY="619.0" radius="10.0" stroke="#0275d8" strokeType="INSIDE" strokeWidth="0.0" />
+        <Circle fill="#5cb85c" layoutX="840.0" layoutY="659.0" radius="10.0" stroke="#5cb85c" strokeType="INSIDE" strokeWidth="0.0" />
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="movieListPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1104.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameListController">
+    <children>
+        <FlowPane fx:id="menuFlowPane" prefHeight="70.0" prefWidth="1105.0" style="-fx-background-color: #444444">
+         <children>
+            <AnchorPane prefHeight="71.0" prefWidth="1105.0">
+               <children>
+                  <MenuBar layoutX="984.0" layoutY="1.0" prefHeight="48.0" prefWidth="67.0" style="-fx-background-color: #444444;">
+                     <menus>
+                        <Menu mnemonicParsing="false">
+                           <items>
+                              <MenuItem fx:id="Profile_Btn" mnemonicParsing="false" onAction="#Profile" text="Προφίλ" />
+                              <MenuItem fx:id="Edit_Btn" mnemonicParsing="false" onAction="#EditProfile" text="Επεξεργασία προφίλ" />
+                              <MenuItem fx:id="Logout_Btn" mnemonicParsing="false" onAction="#LogOut" text="Αποσύνδεση" />
+                           </items>
+                           <graphic>
+                              <ImageView fx:id="profileImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <TextField fx:id="id_Text" layoutX="817.0" layoutY="12.0" onKeyReleased="#Search" promptText="Αναζήτηση" />
+                  <ChoiceBox fx:id="choiceBox" layoutX="643.0" layoutY="12.0" prefWidth="150.0" />
+                  <Label layoutX="493.0" layoutY="14.0" prefHeight="21.0" prefWidth="150.0" text="Άναζήτηση παχνιδιού" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="DiscountedOnly" layoutX="643.0" layoutY="41.0" mnemonicParsing="false" onAction="#DiscountedGamesCheckBox" prefHeight="17.0" prefWidth="149.0" text="Παιχνίδια Σε Έκπτωση" textFill="WHITE" />
+               </children></AnchorPane>
+         </children></FlowPane>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="-1.0" layoutY="91.0" prefHeight="610.0" prefWidth="1104.0" style="-fx-background-color: #333333;">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <content>
+                <GridPane fx:id="gridPane" prefHeight="619.0" prefWidth="1075.0" style="-fx-background-color: #333333;">
+
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
